@@ -1,7 +1,13 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { HomePage } from "./components/Home";
 
 function App() {
-  return <div>Welcome to the customer registration system</div>;
+  return (
+    <Routes>
+      <Route element={<HomePage />} path="/" />
+    </Routes>
+  );
 }
 
 export default App;
