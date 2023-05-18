@@ -5,16 +5,20 @@ import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 import { ClientRegister } from "./components/ClientRegister";
 import { ParticipantList } from "./components/ParticipantList";
+import { NavBar } from "./components/NavBar";
 
 function App() {
   return (
-    <Routes>
-      <Route element={<HomePage />} path="/" />
-      <Route element={<Login />} path="/login" />
-      <Route element={<Register />} path="/register" />
-      <Route element={<ClientRegister />} path="/clientregister" />
-      <Route element={<ParticipantList />} path="/participants" />
-    </Routes>
+    <>
+      <NavBar />
+      <Routes>
+        <Route element={<HomePage />} path="/" />
+        <Route element={<Login />} path="/login" />
+        <Route element={<Register />} path="/register" />
+        <Route element={<ClientRegister />} path="/clientregister" />
+        <Route element={<ParticipantList />} path="/participants" />
+      </Routes>
+    </>
   );
 }
 
