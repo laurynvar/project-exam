@@ -20,9 +20,6 @@ export const NavBar = () => {
             <Nav.Link as={Link} to="/participants">
               PARTICIPANTS
             </Nav.Link>
-            <Nav.Link as={Link} to="/">
-              SIGN OUT
-            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
