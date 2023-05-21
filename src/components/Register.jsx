@@ -11,9 +11,9 @@ import {
 
 export const Register = () => {
   const [formData, setFormData] = useState({
-    surname: "",
-    name: "",
     email: "",
+    name: "",
+    surname: "",
     password: "",
   });
 
@@ -22,7 +22,7 @@ export const Register = () => {
   const onHandleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:5000/admins", formData).then((response) => {
+    axios.post("http://localhost:5000/register", formData).then((response) => {
       navigate("/login");
     });
   };

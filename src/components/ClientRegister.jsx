@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   MDBContainer,
   MDBRow,
@@ -7,34 +8,78 @@ import {
   MDBBtn,
   MDBTextArea,
 } from "mdb-react-ui-kit";
+import axios from "axios";
 
 export const ClientRegister = () => {
+  const [form, setForm] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleChange = (event) => {
+    setForm({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:5000/participants", form)
+      .then((response) => console.log("Succesful response", response))
+      .catch((err) => console.log("err", err));
+  };
+
   return (
     <MDBContainer fluid className="mt-5">
       <section>
         <MDBRow className="justify-content-center">
           <MDBCol lg="8">
-            <form>
+            <form onSubmit={handleOnSubmit}>
               <MDBRow>
                 <MDBCol>
-                  <MDBInput className="mb-4" label="First name" />
+                  <MDBInput
+                    name="name"
+                    onChange={handleChange}
+                    className="mb-4"
+                    label="First name"
+                  />
                 </MDBCol>
                 <MDBCol>
-                  <MDBInput className="mb-4" label="Last name" />
+                  <MDBInput
+                    name="surname"
+                    onChange={handleChange}
+                    className="mb-4"
+                    label="Last name"
+                  />
                 </MDBCol>
               </MDBRow>
 
-              <MDBInput className="mb-4" label="Email" type="email" />
-
-              <MDBInput className="mb-4" label="Phone" type="tel" />
-
-              <MDBTextArea
-                label="Additional information"
-                rows={4}
+              <MDBInput
+                name="email"
+                onChange={handleChange}
                 className="mb-4"
+                label="Email"
+                type="email"
               />
 
-              <MDBBtn type="submit" block className="mb-4">
+              <MDBInput
+                name="phone"
+                onChange={handleChange}
+                className="mb-4"
+                label="Phone"
+                type="tel"
+              />
+
+              <MDBBtn
+                onSubmit={handleOnSubmit}
+                type="submit"
+                block
+                className="mb-4"
+              >
                 Register participant
               </MDBBtn>
             </form>
