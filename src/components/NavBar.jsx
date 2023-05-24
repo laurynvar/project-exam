@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import logo from "../assets/white_logo.png";
 
 import { Link } from "react-router-dom";
 import { AuthenticationContext } from "./AuthenticationContext";
@@ -19,7 +20,7 @@ export const NavBar = ({ isLoading, onLogOut }) => {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Navbar
+            <img src={logo} alt="logo" />
           </Navbar.Brand>
           <Nav className="me-auto">
             {isSignedIn ? (
