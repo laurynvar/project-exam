@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   MDBBtn,
   MDBCard,
@@ -12,8 +13,8 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 
-export const Participant = ({ participant }) => {
-  const { name, surname, email, phone } = participant;
+export const Participant = ({ participant, onDelete }) => {
+  const { id, name, surname, email, phone } = participant;
 
   return (
     <>
@@ -49,7 +50,7 @@ export const Participant = ({ participant }) => {
                   {phone}
                 </MDBTypography>
               </div>
-              <MDBBtn style={{ color: "#cecece" }}>
+              <MDBBtn onClick={() => onDelete(id)} style={{ color: "#cecece" }}>
                 <MDBIcon fas icon="trash-alt" />
               </MDBBtn>
             </div>
