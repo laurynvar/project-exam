@@ -50,7 +50,7 @@ export const ParticipantList = () => {
     return <div>Loading...</div>;
   }
 
-  if (!isSignedIn) {
+  if (isSignedIn) {
     return (
       <>
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
