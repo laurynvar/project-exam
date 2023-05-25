@@ -3,6 +3,7 @@ import { Participant } from "./Participant";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { AuthenticationContext } from "./AuthenticationContext";
+import logo from "../assets/white_logo.png";
 
 import {
   MDBBtn,
@@ -109,93 +110,46 @@ export const ParticipantList = () => {
                                 alt=""
                               />
                             </div>
-                            <MDBTypography tag="h5" className="mb-0">
-                              Event details
+
+                            <img src={logo} style={{ width: "150px" }} />
+                            <MDBTypography tag="h2" className="mb-0">
+                              RAMMSTEIN AFTERPARTY
                             </MDBTypography>
-                            <p className="small">Payment methods</p>
-                            <a href="#!" type="submit" className="text-white">
-                              <MDBIcon fab icon="cc-mastercard fa-2x me-2" />
-                            </a>
-                            <a href="#!" type="submit" className="text-white">
-                              <MDBIcon fab icon="cc-visa fa-2x me-2" />
-                            </a>
-                            <a href="#!" type="submit" className="text-white">
-                              <MDBIcon fab icon="cc-amex fa-2x me-2" />
-                            </a>
-                            <a href="#!" type="submit" className="text-white">
-                              <MDBIcon fab icon="cc-paypal fa-2x me-2" />
-                            </a>
 
-                            <form className="mt-4">
-                              <MDBInput
-                                className="mb-4"
-                                label="Cardholder's Name"
-                                type="text"
-                                size="lg"
-                                placeholder="Cardholder's Name"
-                                contrast
-                              />
+                            <hr />
 
-                              <MDBInput
-                                className="mb-4"
-                                label="Card Number"
-                                type="text"
-                                size="lg"
-                                minLength="19"
-                                maxLength="19"
-                                placeholder="1234 5678 9012 3457"
-                                contrast
-                              />
+                            <p className="small">Venue:</p>
+                            <MDBTypography tag="h5" className="mb-0">
+                              Vilnius | Lithuania
+                            </MDBTypography>
 
-                              <MDBRow className="mb-4">
-                                <MDBCol md="6">
-                                  <MDBInput
-                                    className="mb-4"
-                                    label="Expiration"
-                                    type="text"
-                                    size="lg"
-                                    minLength="7"
-                                    maxLength="7"
-                                    placeholder="MM/YYYY"
-                                    contrast
-                                  />
-                                </MDBCol>
-                                <MDBCol md="6">
-                                  <MDBInput
-                                    className="mb-4"
-                                    label="Cvv"
-                                    type="text"
-                                    size="lg"
-                                    minLength="3"
-                                    maxLength="3"
-                                    placeholder="&#9679;&#9679;&#9679;"
-                                    contrast
-                                  />
-                                </MDBCol>
-                              </MDBRow>
-                            </form>
+                            <MDBTypography tag="h5" className="mb-0">
+                              Vingio parkas
+                            </MDBTypography>
+
+                            <MDBRow className="mb-4"></MDBRow>
+
+                            <MDBRow className="mb-4">
+                              <MDBCol md="6">
+                                <p className="small">Date:</p>
+                                <MDBTypography tag="h5" className="mb-0">
+                                  23/05/22
+                                </MDBTypography>
+                              </MDBCol>
+                              <MDBCol md="6">
+                                <p className="small">Time:</p>
+                                <MDBTypography tag="h5" className="mb-0">
+                                  11 PM - 3 AM
+                                </MDBTypography>
+                              </MDBCol>
+                            </MDBRow>
 
                             <hr />
 
                             <div className="d-flex justify-content-between">
-                              <p className="mb-2">Subtotal</p>
-                              <p className="mb-2">100&euro;</p>
+                              <p className="mb-2">Registered participants</p>
+                              <p className="mb-2">100</p>
                             </div>
-
-                            <div className="d-flex justify-content-between">
-                              <p className="mb-2">Total(Incl. taxes)</p>
-                              <p className="mb-2">100&euro;</p>
-                            </div>
-
-                            <MDBBtn color="info" block size="lg">
-                              <div className="d-flex justify-content-between">
-                                <span>100&euro;</span>
-                                <span>
-                                  Checkout{" "}
-                                  <i className="fas fa-long-arrow-alt-right ms-2"></i>
-                                </span>
-                              </div>
-                            </MDBBtn>
                           </MDBCardBody>
                         </MDBCard>
                       </MDBCol>

@@ -24,7 +24,7 @@ export const Participant = ({ participant, onDelete }) => {
             <div className="d-flex flex-row align-items-center">
               <div>
                 <MDBCardImage
-                  src="https://global-uploads.webflow.com/618e36726d3c0f19c9284e56/61f7ce8e8dc8d6499373f820_user.png"
+                  src="https://simg.nicepng.com/png/small/136-1366211_group-of-10-guys-login-user-icon-png.png"
                   fluid
                   className="rounded-circle"
                   alt=""
@@ -45,12 +45,18 @@ export const Participant = ({ participant, onDelete }) => {
                   className="fw-normal mb-0"
                 ></MDBTypography>
               </div>
+              <MDBIcon fas icon="phone" style={{ marginRight: "5px" }} />
               <div style={{ width: "150px" }}>
                 <MDBTypography tag="h5" className="mb-0">
                   {phone}
                 </MDBTypography>
               </div>
-              <MDBBtn onClick={() => onDelete(id)} style={{ color: "#cecece" }}>
+              <MDBBtn
+                color="dark"
+                className="rounded-circle"
+                onClick={() => onDelete(id)}
+                style={{ color: "#cecece" }}
+              >
                 <MDBIcon fas icon="trash-alt" />
               </MDBBtn>
             </div>

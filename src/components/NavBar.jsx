@@ -23,7 +23,7 @@ export const NavBar = ({ isLoading, onLogOut }) => {
             <img src={logo} alt="logo" />
           </Navbar.Brand>
           <Nav className="me-auto">
-            {isSignedIn ? (
+            {isSignedIn && (
               <>
                 <Nav.Link as={Link} to="/clientregister">
                   CLIENT REGISTRATION
@@ -31,13 +31,20 @@ export const NavBar = ({ isLoading, onLogOut }) => {
                 <Nav.Link as={Link} to="/participants">
                   PARTICIPANTS
                 </Nav.Link>
+              </>
+            )}
+          </Nav>
+          <Nav>
+            {isSignedIn ? (
+              <>
+                <Navbar.Text>Signed in as: Mark Otto</Navbar.Text>
                 <MDBBtn
+                  color="dark"
+                  className="rounded-circle"
                   onClick={onLogOut}
-                  size="lg"
-                  floating
-                  style={{ backgroundColor: "#ac2bac" }}
+                  style={{ color: "#cecece", marginLeft: "10px" }}
                 >
-                  {isSignedIn && <MDBIcon fab icon="instagram" />}
+                  <MDBIcon fas icon="sign-out-alt" />
                 </MDBBtn>
               </>
             ) : (
