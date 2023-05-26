@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/white_logo.png";
 import {
   MDBFooter,
   MDBContainer,
@@ -9,7 +10,7 @@ import {
 
 export const Footer = () => {
   return (
-    <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
+    <MDBFooter bgColor="black" className="text-center text-lg-start text-light">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="me-5 d-none d-lg-block">
           <span>Get connected with us on social networks:</span>
@@ -41,14 +42,15 @@ export const Footer = () => {
         <MDBContainer className="text-center text-md-start mt-5">
           <MDBRow className="mt-3">
             <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">
-                <MDBIcon icon="gem" className="me-3" />
-                Company name
-              </h6>
+              <img
+                src={logo}
+                style={{ width: "150px", paddingBottom: "10px" }}
+              />
               <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
+                We bring your visions to life, creating unforgettable
+                experiences for any occasion. With our expertise and attention
+                to detail, from corporate conferences to weddings, we'll handle
+                it all while you enjoy a seamless and extraordinary event.
               </p>
             </MDBCol>
 
@@ -104,11 +106,11 @@ export const Footer = () => {
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
+                Vilnius, Lithuania 10012, LT
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                info@soirees.com
               </p>
               <p>
                 <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
@@ -125,10 +127,7 @@ export const Footer = () => {
         className="text-center p-4"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
       >
-        © 2021 Copyright:
-        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
+        © 2023 Copyright: soirees.events
       </div>
     </MDBFooter>
   );

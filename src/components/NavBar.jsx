@@ -17,7 +17,7 @@ export const NavBar = ({ isLoading, onLogOut }) => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="black" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img src={logo} alt="logo" />
@@ -39,7 +39,7 @@ export const NavBar = ({ isLoading, onLogOut }) => {
               <>
                 <Navbar.Text>Signed in as: Mark Otto</Navbar.Text>
                 <MDBBtn
-                  color="dark"
+                  color="black"
                   className="rounded-circle"
                   onClick={onLogOut}
                   style={{ color: "#cecece", marginLeft: "10px" }}
