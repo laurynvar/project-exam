@@ -6,6 +6,7 @@ import { Register } from "./components/Register";
 import { ClientRegister } from "./components/ClientRegister";
 import { ParticipantList } from "./components/ParticipantList";
 import { NavBar } from "./components/NavBar";
+import { Footer } from "./components/Footer";
 import { useContext, useState } from "react";
 import { AuthenticationContext } from "./components/AuthenticationContext";
 import Protected from "./components/Protected";
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <NavBar onLogOut={handleLogOut} />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
@@ -32,6 +34,7 @@ function App() {
           <Route path="/participants" element={<ParticipantList />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }
