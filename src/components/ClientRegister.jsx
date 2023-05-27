@@ -46,29 +46,24 @@ export const ClientRegister = () => {
               <MDBRow className="justify-content-center">
                 <MDBCol lg="8">
                   <div className="text-center">
-                    <MDBIcon
-                      fas
-                      icon="user-plus"
-                      size="3x"
-                      style={{ marginTop: "30px" }}
-                    />
                     <hr />
                     <MDBRow>
                       <h1
-                        className="my-3 display-3 fw-bold ls-tight"
+                        className="my-3 display-4 fw-bold ls-tight"
                         style={{
                           color: "black",
                         }}
                       >
-                        Come on in! <br />
+                        Hey Registrahero! <br />
                         <span
                           style={{
                             color:
                               "hsl(210, 1.9999999999999931%, 80.3921568627451%)",
                           }}
                         >
-                          we have exclusive discounts and memes that will make
-                          you LOL!
+                          Welcome to the land of 'Registra-topia', where
+                          participant registration reigns supreme and chaos is
+                          our middle name.
                         </span>
                       </h1>
                     </MDBRow>

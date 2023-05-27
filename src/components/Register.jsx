@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { StyledRegisterHero } from "../styles/StyledRegister";
 import {
   MDBContainer,
   MDBRow,
@@ -34,16 +35,10 @@ export const Register = () => {
     });
   };
 
+  const RegisterHero = require("../assets/register_hero.png");
+
   return (
     <>
-      <div
-        className="p-5 text-center bg-image"
-        style={{
-          backgroundImage:
-            "url('https://mdbootstrap.com/img/new/slides/041.webp')",
-          height: 800,
-        }}
-      ></div>
       <MDBContainer style={{ position: "absolute" }} fluid className="mt-5">
         <section className="background-radial-gradient overflow-hidden ">
           <div className="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
@@ -58,15 +53,6 @@ export const Register = () => {
                     we have cookies and sweet deals!
                   </span>
                 </h1>
-                <p
-                  className="mb-4 opacity-70"
-                  style={{ color: "hsl(218, 81%, 85%)" }}
-                >
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Temporibus, expedita iusto veniam atque, magni tempora
-                  mollitia dolorum consequatur nulla, neque debitis eos
-                  reprehenderit quasi ab ipsum nisi dolorem modi. Quos?
-                </p>
               </div>
 
               <div className="col-lg-6 mb-5 mb-lg-0 position-relative">
@@ -125,6 +111,7 @@ export const Register = () => {
                         type="submit"
                         block
                         className="mb-4"
+                        color="dark"
                       >
                         Sign up
                       </MDBBtn>
@@ -144,6 +131,10 @@ export const Register = () => {
           </div>
         </section>
       </MDBContainer>
+
+      <div>
+        <StyledRegisterHero src={RegisterHero} />
+      </div>
     </>
   );
 };

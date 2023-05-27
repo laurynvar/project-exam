@@ -53,33 +53,24 @@ export const Login = () => {
                 >
                   Come on in! <br />
                   <span style={{ color: "hsl(218, 81%, 75%)" }}>
-                    we have exclusive discounts and memes that will make you
-                    LOL!
+                    It's time to register participants like a boss and unleash
+                    your inner registration superhero!
                   </span>
                 </h1>
-                <p
-                  className="mb-4 opacity-70"
-                  style={{ color: "hsl(218, 81%, 85%)" }}
-                >
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Temporibus, expedita iusto veniam atque, magni tempora
-                  mollitia dolorum consequatur nulla, neque debitis eos
-                  reprehenderit quasi ab ipsum nisi dolorem modi. Quos?
-                </p>
               </div>
 
-              <div className="col-lg-6 mb-5 mb-lg-0 position-relative">
+              <div className="col-lg-6 mb-5 mb-lg-0 position-relative ">
                 <div
                   id="radius-shape-1"
-                  className="position-absolute rounded-circle shadow-5-strong"
+                  className="position-absolute rounded-circle shadow-5-strong "
                 ></div>
                 <div
                   id="radius-shape-2"
-                  className="position-absolute shadow-5-strong"
+                  className="position-absolute shadow-5-strong "
                 ></div>
 
-                <div className="card bg-glass opacity-90">
-                  <div className="card-body px-4 py-5 px-md-5">
+                <div className="card bg-glass opacity-80">
+                  <div className="card-body px-4 py-5 px-md-5  ">
                     <form onSubmit={handleOnSubmit}>
                       <MDBRow className="mb-4"></MDBRow>
 
@@ -105,6 +96,7 @@ export const Login = () => {
                         type="submit"
                         block
                         className="mb-4"
+                        color="dark"
                       >
                         Sign in
                       </MDBBtn>

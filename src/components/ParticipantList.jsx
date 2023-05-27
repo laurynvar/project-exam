@@ -77,18 +77,6 @@ export const ParticipantList = () => {
                         <div className="d-flex justify-content-between align-items-center mb-4">
                           <div>
                             <p className="mb-1">Event participants list</p>
-                            <p className="mb-0">
-                              There are ... participants in the list
-                            </p>
-                          </div>
-                          <div>
-                            <p>
-                              <span className="text-muted">Sort by:</span>
-                              <a href="#!" className="text-body">
-                                name
-                                <MDBIcon fas icon="angle-down mt-1" />
-                              </a>
-                            </p>
                           </div>
                         </div>{" "}
                         {registeredParticipants.map((participant) => (
