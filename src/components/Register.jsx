@@ -36,6 +36,14 @@ export const Register = () => {
 
   return (
     <>
+      <div
+        className="p-5 text-center bg-image"
+        style={{
+          backgroundImage:
+            "url('https://mdbootstrap.com/img/new/slides/041.webp')",
+          height: 800,
+        }}
+      ></div>
       <MDBContainer style={{ position: "absolute" }} fluid className="mt-5">
         <section className="background-radial-gradient overflow-hidden ">
           <div className="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
