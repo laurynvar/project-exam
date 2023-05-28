@@ -120,8 +120,16 @@ export const Register = () => {
                       <div className="text-center"></div>
                       <p>
                         Have already an account?
-                        <Link as={Link} to="/login">
-                          Login here
+                        <Link
+                          as={Link}
+                          to="/login"
+                          style={{
+                            marginLeft: "5px",
+                            textDecoration: "none",
+                            color: "red",
+                          }}
+                        >
+                          Login here!
                         </Link>
                       </p>
                     </form>

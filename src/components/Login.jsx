@@ -107,7 +107,14 @@ export const Login = () => {
 
                       <p>
                         Don't have an account?
-                        <Link as={Link} to="/register">
+                        <Link
+                          as={Link}
+                          to="/register"
+                          style={{
+                            marginLeft: "5px",
+                            textDecoration: "none",
+                          }}
+                        >
                           Sign up here!
                         </Link>
                       </p>
