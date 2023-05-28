@@ -6,14 +6,12 @@ import { AuthenticationContext } from "./AuthenticationContext";
 import logo from "../assets/white_logo.png";
 
 import {
-  MDBBtn,
   MDBCard,
   MDBCardBody,
   MDBCardImage,
   MDBCol,
   MDBContainer,
   MDBIcon,
-  MDBInput,
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
@@ -99,7 +97,11 @@ export const ParticipantList = () => {
                               />
                             </div>
 
-                            <img src={logo} style={{ width: "150px" }} />
+                            <img
+                              src={logo}
+                              style={{ width: "150px" }}
+                              alt="logo"
+                            />
                             <MDBTypography tag="h2" className="mb-0">
                               RAMMSTEIN AFTERPARTY
                             </MDBTypography>

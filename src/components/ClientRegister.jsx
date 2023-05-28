@@ -6,11 +6,8 @@ import {
   MDBCol,
   MDBInput,
   MDBBtn,
-  MDBTextArea,
   MDBCard,
   MDBCardBody,
-  MDBIcon,
-  MDBTypography,
 } from "mdb-react-ui-kit";
 import axios from "axios";
 
@@ -33,8 +30,17 @@ export const ClientRegister = () => {
     e.preventDefault();
     axios
       .post("http://localhost:5000/participants", form)
-      .then((response) => console.log("Succesful response", response))
-      .catch((err) => console.log("err", err));
+      .then((response) => {
+        console.log("Successful response", response);
+        window.location.reload();
+        setForm({
+          name: "",
+          surname: "",
+          email: "",
+          phone: "",
+        });
+      })
+      .catch((err) => console.log("Error", err));
   };
 
   return (

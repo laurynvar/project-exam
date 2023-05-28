@@ -49,10 +49,14 @@ export const Login = () => {
               <div className="col-lg-6 mb-5 mb-lg-0" style={{ zIndex: 10 }}>
                 <h1
                   className="my-5 display-3 fw-bold ls-tight"
-                  style={{ color: "hsl(218, 81%, 95%)" }}
+                  style={{ color: "black" }}
                 >
                   Come on in! <br />
-                  <span style={{ color: "hsl(218, 81%, 75%)" }}>
+                  <span
+                    style={{
+                      color: "white",
+                    }}
+                  >
                     It's time to register participants like a boss and unleash
                     your inner registration superhero!
                   </span>

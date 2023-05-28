@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { HomePage } from "./components/Home";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
@@ -15,7 +15,12 @@ function App() {
   const { setIsSignedIn } = useContext(AuthenticationContext);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogOut = () => setIsSignedIn(false);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    setIsSignedIn(false);
+    navigate("/");
+  };
 
   return (
     <>
