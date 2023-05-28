@@ -6,7 +6,7 @@
 
 #### SOIREES.EVENTS participants registration system
 
-An application used to register event participants, add them to MYSQL database and render the list of registered persons. Built with React, JavaScript for styling it was used `styled-components`. Some component was created with `MDB ui kit`.
+An application used to register event participants, add them to MYSQL database and render the list of registered persons. Built with React, JavaScript for styling it was used `styled-components`. Some components was created with `MDB ui kit`.
 
 ## Project Status
 
