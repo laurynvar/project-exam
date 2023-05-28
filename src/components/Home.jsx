@@ -1,5 +1,5 @@
 import { StyledHomeHero } from "../styles/StyledHomePage";
-import { MDBBtn, MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 const HomeHero = require("../assets/home_hero.png");
 
